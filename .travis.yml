@@ -1,0 +1,14 @@
+services: 
+  - postgresql
+
+before_script:
+- psql -c 'create database jackdawg_api_test;' -U postgres
+
+
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: KastTl046q4sGGeoM2690h9CRwx3+ZS2xJ1a2QbhxCiBuwnz07yBGrmehBAs+GPhwolZCcQg9IiwmUVPjlHnAyCHYLVhWOuu2o+np/a5MouzgVT4bBQJiZZ+X7XoGjWiwd2+9HMXYVD34sTHKInuRMREf68YiHqHTTr1MC1vyEfIQb2kPH7TcRs9RiQLqXMoVuUPUharjyfK/Bdl76GiDY6Gz5Wt5X4H1rNtGlwzZYgtVhwHXPvM0/IG2rVRZ2HZMDXIodlM7A/kqX/OLGtMsNBPgjvnQqOIlcWCvxjGKk0h6gzYG/nk9BtBh7nTP16Ft90CZ2O7ZEHaP3KUj+T+eD87aeTshoiFdz9aIHvdNv3tQzzSgkW9q0BpbpzmSI25mBTNl00rsu8fthyE3kPCizk6F02KXfR6hQfppqh2mjguZieI0bMRuUx2LafxpS/65fRIQx25I5r3rVgiOxcPecENkWYzQZ7pONLlrJblqU6tWxhSLZIsOAKYe0amfcELku6BrRR3CO5abTAFeW7n/k4/LZwV3Lte28l+wrWSqcv6Sj5A4sr4NDYHRur3NcC3MtZ4X7verX7Ec7mMWZETQlgx/xplvJxDKH1X30bei79FgnUFc2KphNbgtcZuyfhYQtLCVjSef7y4BF94YiWSyEiL+oNyrBGGkNaT34iVqRE=
+
+
