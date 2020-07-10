@@ -1,24 +1,15 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+This project is an interesting amalgamation of rails (mainly for migrations) and
+aws lambda functions.
 
-* Ruby version
+Not sure how to arrange everything.
 
-* System dependencies
+Aside from the usual rails stuff:
 
-* Configuration
+1. the /hasura folder contains hasura metadata
 
-* Database creation
+2. the lambda folder contains relevant lambda functions and tests
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

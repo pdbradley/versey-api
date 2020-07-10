@@ -1,0 +1,28 @@
+- table:
+    schema: public
+    name: users
+  select_permissions:
+  - role: employee
+    permission:
+      columns:
+      - id
+      - email
+      - created_at
+      filter: {}
+- table:
+    schema: public
+    name: verses
+  event_triggers:
+  - name: new-verse-reference
+    definition:
+      enable_manual: true
+      insert:
+        columns: '*'
+      update:
+        columns:
+        - reference
+    retry_conf:
+      num_retries: 0
+      interval_sec: 10
+      timeout_sec: 60
+    webhook: https://8evd5lh1a9.execute-api.us-east-1.amazonaws.com/default/rubyexample
